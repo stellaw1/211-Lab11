@@ -2,7 +2,7 @@ R0 N
 R1 i
 R2 j
 R3 k
-S4 sum
+R4 sum
 R5 A-addr
 R6 B-addr
 R7 C-addr
@@ -66,16 +66,13 @@ exit:
 	HALT
     
     
-zero:
-    .double 0.0
-
 num_rows:
-    .word 0x3
+    .word 0x80
 A_array:
 	//row 1
     .double 1.1
-	.double 1.2
-	.double 1.3
+	.double 1.1
+	.double 1.1
 	//row 2 
 	.double 2.1
 	.double 2.1
@@ -87,9 +84,10 @@ A_array:
 
 B_array:
     .double 0.1
-	.double 0.2
-	.double 0.3
 	.double 0.1
+	.double 0.1
+	.double 0.2
+	.double 0.2
 	.double 0.2
 	.double 0.3
 	.double 0.3
